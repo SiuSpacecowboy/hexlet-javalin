@@ -1,5 +1,7 @@
 package main_project.helpfulClasses;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -19,7 +21,15 @@ public class Sesuritu {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-
         return null;
     }
+
+    public static String generateToken() {
+        int length = 10;
+        boolean useLetters = true;
+        boolean useNumbers = true;
+        String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);
+        return generatedString;
+    }
 }
+

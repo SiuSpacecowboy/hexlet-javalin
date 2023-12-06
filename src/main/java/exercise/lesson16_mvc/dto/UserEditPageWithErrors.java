@@ -1,5 +1,6 @@
-package exercise.lesson16.dto;
+package exercise.lesson16_mvc.dto;
 
+import exercise.lesson19_flash_m.BasePage;
 import io.javalin.validation.ValidationError;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +10,7 @@ import java.util.Map;
 
 @AllArgsConstructor
 @Getter
-public class UserEditPageWithErrors {
+public class UserEditPageWithErrors extends BasePage {
 
     private Long id;
     private String firstName;

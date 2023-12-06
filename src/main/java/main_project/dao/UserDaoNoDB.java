@@ -2,23 +2,22 @@ package main_project.dao;
 
 import main_project.dto.User;
 import org.apache.commons.lang3.StringUtils;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-public class UserDao {
+public class UserDaoNoDB implements UserDao{
 
-    private static long ID;
-    //private List<User> users = new ArrayList<>();
-    private List<User> users = List.of(
-            new User(1L,"A", "B", "email", "as"),
-            new User(2L,"A", "B", "email", "as"),
-            new User(3L,"A", "B", "email", "as"),
-            new User(4L,"A", "B", "email", "as"),
-            new User(5L,"A", "B", "email", "as"),
-            new User(6L,"A", "B", "email", "as")
-    );
+    private static long ID = 6;
+    private List<User> users = new ArrayList<>();
+
+    {
+        users.add(new User(1L,"Vitaly", "Brew", "email@ramb.ru", "as", "wrasz"));
+        users.add(new User(2L,"DimAss", "Brow", "email@mai.ru", "as", "mrasz"));
+        users.add(new User(3L,"VlaDick", "Bruw", "email@gma.ru", "as", "crasz"));
+        users.add(new User(4L,"YaroSlave", "Bryw", "email@res.ru", "as", "srasz"));
+        users.add(new User(5L,"SerGay", "Braw", "email@mes.ru", "as", "kvasz"));
+        users.add(new User(6L,"Jassmine", "Brqw", "email@lor.ru", "as", "rasz"));
+    }
 
     public Long save(User user) {
         user.setId(++ID);

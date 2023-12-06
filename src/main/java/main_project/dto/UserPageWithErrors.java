@@ -1,5 +1,6 @@
 package main_project.dto;
 
+import exercise.lesson19_flash_m.BasePage;
 import io.javalin.validation.ValidationError;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,7 +13,7 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-public class UserPageWithErrors {
+public class UserPageWithErrors extends BasePage {
 
     private String firstName;
     private String lastName;

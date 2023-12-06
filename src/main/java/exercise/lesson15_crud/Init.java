@@ -1,4 +1,4 @@
-package exercise.lesson15;
+package exercise.lesson15_crud;
 
 import io.javalin.Javalin;
 import main_project.controllers.MainController;
@@ -10,7 +10,7 @@ public class Init {
         Javalin app = Javalin.create(config ->
                 config.plugins.enableDevLogging());
         app.get(NameRoutes.startPath(), MainController::start);
-        app.get(NameRoutes.allUsersPath(), NinthApp::pages);
+        app.get(NameRoutes.allUsersPath(), PagesController::pages);
         app.get(NameRoutes.buildUserPath(), MainController::buildUser);
         app.get(NameRoutes.oneUserPath("{id}"), MainController::getOneUser);
         app.post(NameRoutes.allUsersPath(), MainController::postBuildUser);

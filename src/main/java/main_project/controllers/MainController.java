@@ -3,6 +3,8 @@ package main_project.controllers;
 import io.javalin.http.Context;
 import io.javalin.validation.ValidationException;
 import main_project.dao.UserDao;
+import main_project.dao.UserDaoDB;
+import main_project.dao.UserDaoNoDB;
 import main_project.dto.User;
 import main_project.dto.UserPage;
 import main_project.dto.UserPageWithErrors;
@@ -16,7 +18,8 @@ import java.util.List;
 
 public class MainController {
 
-    private static final UserDao userDao = new UserDao();
+    /*private static final UserDao userDao = new UserDaoNoDB();*/
+    private static final UserDao userDao = new UserDaoDB();
 
     public static void start(Context ctx) {
         ctx.render("main_project/start-page.jte");

@@ -1,4 +1,4 @@
-package exercise.lesson15;
+package exercise.lesson15_crud;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,5 +12,6 @@ public class UsersPage {
 
     private List<User> users;
     private Long page;
+    private Long finalPage;
     private boolean haveUsers;
 }
